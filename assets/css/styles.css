@@ -1,0 +1,77 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Black background for the whole page */
+  color: white;
+}
+
+header {
+  background-color: #000; /* Black background for the navbar */
+  padding: 15px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+ul.nav-left {
+  margin-left: 10px;
+}
+
+ul.nav-right {
+  margin-right: 10px;
+}
+
+li {
+  margin: 0 10px;
+}
+
+/* Link styling with hover underline effect */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px; /* Tighter padding for links */
+  font-weight: bold; /* Bold font */
+  margin-top: 10px; /* Add margin above links */
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Slide underline from left to right */
+}
+
+.nav-link:active::after {
+  width: 100%; /* Keep underline when active */
+}
+
+/* Additional styling for better UX */
+.nav-link {
+  background-color: transparent; /* No background until hover */
+  border: none;
+}
